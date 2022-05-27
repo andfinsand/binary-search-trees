@@ -14,8 +14,11 @@ class Tree():
         newNode = Node(value)
         runner = self.root
 
-        if newNode.value < self.root.value:
-            self.root.left = newNode
+        if newNode.value < runner.value:
+            if not runner.left:
+                runner.left = newNode
+
+            
 
     #     while runner:
     #         if newNode.value < runner.value:
