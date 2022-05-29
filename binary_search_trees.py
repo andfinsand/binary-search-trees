@@ -26,12 +26,26 @@ class Tree():
                     return self
                 else:
                     runner = runner.right
+    def contains(self, value):
+        runner = self.root
+        while runner:
+            if value == runner.value:
+                return True
+            else:
+                if value < runner.value:
+                    if runner.left == None:
+                        return False
+                    else:
+                        runner = runner.left
+                else:
+                    if runner.right == None:
+                        return False
+                    else:
+                        runner = runner.right
+
 
 myTree = Tree(7)
 
-myTree.add(4).add(2).add(8)
+print(myTree.add(4).add(2).add(8).contains(1))
 
-# myTree.add(4).add(2).add(8)
 print(myTree.root.right.value)
-# myTree.add(4).add(2).add(8)
-# print(myTree.root.left.value)
