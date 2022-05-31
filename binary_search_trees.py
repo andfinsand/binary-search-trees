@@ -43,9 +43,9 @@ class Tree():
                     else:
                         runner = runner.right
 
-
 myTree = Tree(7)
 
 print(myTree.add(4).add(2).add(8).contains(1))
+
 
 print(myTree.root.right.value)
